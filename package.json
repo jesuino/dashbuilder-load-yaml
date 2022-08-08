@@ -1,0 +1,15 @@
+{
+  "name": "dashbuilder-load-yaml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy:dashbuilder": "mkdir -p dist/dashbuilder && cp -r node_modules/@kie-tools/dashbuilder-client/dist/* dist/dashbuilder",
+    "copy:assets": "cp -r src/* dist",
+    "clean": "rm -rf dist",
+    "init": "mkdir dist",
+    "build": "npm run clean && npm run init && npm run copy:dashbuilder && npm run copy:assets"
+  },
+  "dependencies": {
+    "@kie-tools/dashbuilder-client": "0.21.0"
+  }}
